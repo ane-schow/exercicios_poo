@@ -1,0 +1,10 @@
+import math
+movimentacoes, saldo = [int(w) for w in input().split()]
+menor_saldo = math.inf
+
+for _ in range(movimentacoes):
+    mov_diaria = int(input())
+    saldo += mov_diaria
+    if saldo < menor_saldo:
+        menor_saldo = saldo
+print(menor_saldo)
